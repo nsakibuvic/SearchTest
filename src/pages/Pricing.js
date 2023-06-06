@@ -3,10 +3,10 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Header from "components/headers/light.js";
 import Pricing from "components/pricing/TwoPlansWithDurationSwitcher.js";
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
-import Footer from "components/footers/FiveColumnWithInputForm.js";
+import MiniCenteredFooter from "components/footers/MiniCenteredFooter";
 import FAQ from "components/faqs/SingleCol.js";
 
-export default () => {
+const PricingPage = () => {
   return (
     <AnimationRevealPage>
       <Header />
@@ -15,7 +15,9 @@ export default () => {
         heading="Our Paying Customers"
       />
       <FAQ />
-      <Footer/>
+      <MiniCenteredFooter />     
     </AnimationRevealPage>
   );
 };
+
+export default PricingPage

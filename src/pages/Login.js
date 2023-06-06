@@ -9,6 +9,7 @@ import logo from "images/logo.svg";
 import googleIconImageSrc from "images/google-icon.png";
 import twitterIconImageSrc from "images/twitter-icon.png";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
+import MiniCenteredFooter from "components/footers/MiniCenteredFooter";
 
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white text-gray-900 shadow sm:rounded-lg flex justify-center flex-1`;
@@ -53,7 +54,7 @@ const IllustrationImage = styled.div`
   ${tw`m-12 xl:m-16 w-full max-w-sm bg-contain bg-center bg-no-repeat`}
 `;
 
-export default ({
+const LoginPage = ({
   logoLinkUrl = "#",
   illustrationImageSrc = illustration,
   headingText = "Sign In To Treact",
@@ -125,5 +126,8 @@ export default ({
         </IllustrationContainer>
       </Content>
     </Container>
+    <MiniCenteredFooter />
   </AnimationRevealPage>
 );
+
+export default LoginPage;

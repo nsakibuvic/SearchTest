@@ -215,16 +215,7 @@ export const components = {
           url: "/components/blocks/Form/TwoColContactUs",
         }       
       }
-    },
-    Footer: {
-      type: "Footers Section",
-      elements: {     
-        MiniCentered: {         
-          component: MiniCenteredFooter,
-          url: "/components/blocks/Footer/MiniCentered",
-        },
-      }
-    }
+    },  
   }
 }
 

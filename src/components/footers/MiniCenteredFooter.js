@@ -29,7 +29,7 @@ const SocialLink = styled.a`
 `;
 
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`
-export default () => {
+const MiniCenteredFooter = () => {
   return (
     <Container>
       <Content>
@@ -64,3 +64,5 @@ export default () => {
     </Container>
   );
 };
+
+export default MiniCenteredFooter

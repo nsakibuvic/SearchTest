@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import Header from "components/headers/light.js";
-import Footer from "components/footers/FiveColumnWithInputForm.js";
+import MiniCenteredFooter from "components/footers/MiniCenteredFooter";
 import { SectionHeading } from "components/misc/Headings";
 
 const HeadingRow = tw.div`flex`;
@@ -35,7 +35,7 @@ const Text = styled.div`
   }
 `;
 
-export default ({ headingText = "Terms And Condition" }) => {
+const TermsOfServicePage = ({ headingText = "Terms And Condition" }) => {
   return (
     <AnimationRevealPage>
       <Header />
@@ -269,7 +269,9 @@ export default ({ headingText = "Terms And Condition" }) => {
           </Text>
         </ContentWithPaddingXl>
       </Container>
-      <Footer />
+      <MiniCenteredFooter />      
     </AnimationRevealPage>
   );
 };
+
+export default TermsOfServicePage;

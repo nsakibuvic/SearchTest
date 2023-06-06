@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import Header from "components/headers/light.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
+import MiniCenteredFooter from "components/footers/MiniCenteredFooter";
 import { SectionHeading } from "components/misc/Headings";
 
 const HeadingRow = tw.div`flex`;
@@ -34,7 +35,7 @@ const Text = styled.div`
     }
   }
 `;
-export default ({ headingText = "Privacy Policy" }) => {
+const PrivacyPolicyPage = ({ headingText = "Privacy Policy" }) => {
   return (
     <AnimationRevealPage>
       <Header />
@@ -386,6 +387,9 @@ export default ({ headingText = "Privacy Policy" }) => {
         </ContentWithPaddingXl>
       </Container>
       <Footer />
+      <MiniCenteredFooter />
     </AnimationRevealPage>
   );
 };
+
+export default PrivacyPolicyPage;

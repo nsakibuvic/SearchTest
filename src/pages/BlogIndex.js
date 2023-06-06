@@ -5,9 +5,9 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro";
 import Header from "components/headers/light.js";
-import Footer from "components/footers/FiveColumnWithInputForm.js";
 import { SectionHeading } from "components/misc/Headings";
 import { PrimaryButton } from "components/misc/Buttons";
+import MiniCenteredFooter from "components/footers/MiniCenteredFooter";
 
 const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -46,7 +46,7 @@ const Description = tw.div``;
 const ButtonContainer = tw.div`flex justify-center`;
 const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
-export default ({
+const BlogIndexPage =  ({
   headingText = "Blog Posts",
   posts = [
     {
@@ -114,7 +114,7 @@ export default ({
           )}
         </ContentWithPaddingXl>
       </Container>
-      <Footer />
+      <MiniCenteredFooter />      
     </AnimationRevealPage>
   );
 };
@@ -129,3 +129,6 @@ const getPlaceholderPost = () => ({
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   url: "https://reddit.com"
 });
+
+export default BlogIndexPage;
+

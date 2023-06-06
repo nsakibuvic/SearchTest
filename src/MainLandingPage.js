@@ -19,8 +19,9 @@ import { ReactComponent as RadioIcon } from "feather-icons/dist/icons/radio.svg"
 import { ReactComponent as HandleIcon } from "images/handle-icon.svg";
 
 import heroScreenshotImageSrc from "images/demo/MainLandingPageHero.png";
-import logo from "images/logo.svg";
 import useInView from "helpers/useInView";
+import Header from "components/headers/light"
+import MiniCenteredFooter from "components/footers/MiniCenteredFooter";
 
 /* Hero */
 const Row = tw.div`flex`;
@@ -130,33 +131,7 @@ export default ({
 		<AnimationRevealPage disabled>
 			<Container tw="bg-gray-100 -mx-8 -mt-8 pt-8 px-8">
 				<Content2Xl>
-					<NavRow>
-						<LogoLink href="/">
-							<img src={logo} alt="" />
-							Treact
-						</LogoLink>
-						<div tw="flex flex-wrap justify-center lg:justify-end items-center -mr-12">
-							<NavLink
-								target="_blank"
-								href="https://owaiskhan.me/post/free-tailwindcss-react-ui-kit"
-							>
-								License & Usage
-							</NavLink>
-							<NavLink target="_blank" href="https://owaiskhan.me">
-								Who Am I ?
-							</NavLink>
-							<NavLink target="_blank" href="https://twitter.com/owaiswiz">
-								Twitter
-							</NavLink>
-							<NavLink target="_blank" href="mailto:owaiswiz@gmail.com">
-								Hire Me!
-							</NavLink>
-							<div tw="md:hidden flex-100 h-0"></div>
-							<PrimaryNavLink target="_blank" href="https://gum.co/QaruQ">
-								Download Now
-							</PrimaryNavLink>
-						</div>
-					</NavRow>
+					<Header />					
 					<HeroRow>
 						<UpdateNotice>
 							<UpdateNoticeIcon />
@@ -194,6 +169,7 @@ export default ({
 					</div>
 				</Content2Xl>
 			</Container>
+      <MiniCenteredFooter />
 		</AnimationRevealPage>
 	);
 };
@@ -276,7 +252,7 @@ const Block = ({ notifyIsVisible, components }) => {
 							</ResizableBox>
 						</ComponentContent>
 					</Component>
-				))}
+				))}        
 			</Components>
 		</div>
 	);
