@@ -1,7 +1,7 @@
 module.exports = {
   twin: {
     styled: "styled-components",
-    config: "./src/.config.js",
+    config: "./src/tailwind.config.js",
     format: "auto"
   }
 };
