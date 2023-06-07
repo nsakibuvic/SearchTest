@@ -93,16 +93,6 @@ export default ({
 		window.gtag("config", "UA-45799926-9");
 	}, []);
 
-	const previewImageAnimationVariants = {
-		rest: {
-			backgroundPositionY: "0%",
-		},
-		hover: {
-			backgroundPositionY: "100%",
-			transition: { type: "tween", ease: "linear", duration: 5 },
-		},
-	};
-
 	const noOfInnerPages = Object.keys(innerPages).length;
 	const noOfComponentBlocks = Object.values(blocks).reduce(
 		(acc, block) => acc + Object.keys(block.elements).length,
