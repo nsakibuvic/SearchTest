@@ -85,8 +85,7 @@ export default ({
 	primaryButtonText = "Explore Demos",
 	secondaryButtonUrl = "#componentDemos",
 	secondaryButtonText = "View Components",
-	buttonRoundedCss = "",
-	landingPages = components.landingPages,
+	buttonRoundedCss = "",	
 	innerPages = components.innerPages,
 	blocks = components.blocks,
 	heading = "Free Modern React Templates for every need.",
@@ -111,15 +110,13 @@ export default ({
 		},
 	};
 
-	const noOfLandingPages = Object.keys(landingPages).length;
 	const noOfInnerPages = Object.keys(innerPages).length;
 	const noOfComponentBlocks = Object.values(blocks).reduce(
 		(acc, block) => acc + Object.keys(block.elements).length,
 		0
 	);
 
-	features = features || [
-		`${noOfLandingPages} Landing Page Demos`,
+	features = features || [		
 		`${noOfInnerPages} Inner Pages`,
 		`${noOfComponentBlocks} Components`,
 		"Uses TailwindCSS",
